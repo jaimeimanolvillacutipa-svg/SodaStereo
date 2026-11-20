@@ -1,0 +1,513 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+.header {
+    width: 100%;
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808;
+    border-bottom: 1px solid #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span,
+.footer h2 span {
+    color: #e5252a;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #cccccc;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e5252a;
+}
+
+/* PORTADA */
+
+.hero {
+    height: 100vh;
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 12%;
+    overflow: hidden;
+    background: #111;
+}
+
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.95) 0%,
+        rgba(0,0,0,0.75) 45%,
+        rgba(0,0,0,0.25) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    margin-top: 60px;
+}
+
+.subtitle {
+    color: #e5252a;
+    letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 10vw, 125px);
+    line-height: 0.85;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #e5252a;
+}
+
+.hero-description {
+    color: #cccccc;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 430px;
+    margin: 30px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 17px 30px;
+    background: #e5252a;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+    color: #111;
+}
+
+.hero-number {
+    position: absolute;
+    bottom: 45px;
+    right: 8%;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 4px;
+    z-index: 2;
+}
+
+/* SECCIONES GENERALES */
+
+.section {
+    padding: 110px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-title p {
+    color: #e5252a;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+/* HISTORIA */
+
+.historia {
+    background: #101010;
+}
+
+.historia-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.historia-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.historia-image img:hover {
+    filter: grayscale(0%);
+}
+
+.red-line {
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #e5252a;
+    margin-bottom: 25px;
+}
+
+.historia-text h3 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.historia-text p {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* INTEGRANTES */
+
+.integrantes {
+    background: #080808;
+}
+
+.members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.member-card {
+    background: #141414;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+}
+
+.member-card img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.member-card:hover img {
+    filter: grayscale(0%);
+}
+
+.member-info {
+    padding: 25px;
+}
+
+.member-info span {
+    color: #e5252a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.member-info h3 {
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.member-info p {
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* DISCOGRAFÍA */
+
+.discografia {
+    background: #111111;
+}
+
+.albums {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.album-card {
+    position: relative;
+    overflow: hidden;
+    background: #181818;
+}
+
+.album-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.album-card:hover img {
+    transform: scale(1.07);
+    opacity: 0.65;
+}
+
+.album-info {
+    padding: 22px;
+}
+
+.album-info span {
+    color: #e5252a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.album-info h3 {
+    font-size: 19px;
+    margin-top: 8px;
+}
+
+/* MÚSICA */
+
+.musica {
+    background: #080808;
+}
+
+.songs {
+    max-width: 850px;
+    margin: auto;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 23px 15px;
+    border-bottom: 1px solid #292929;
+    transition: 0.3s;
+}
+
+.song:hover {
+    background: #171717;
+    padding-left: 30px;
+}
+
+.song > span:first-child {
+    color: #e5252a;
+    font-size: 13px;
+}
+
+.song h3 {
+    flex: 1;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.play {
+    color: #e5252a;
+    font-size: 15px;
+}
+
+/* FRASE FINAL */
+
+.quote {
+    padding: 110px 20px;
+    text-align: center;
+    background: linear-gradient(
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.95)
+    );
+}
+
+.quote p {
+    color: #e5252a;
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.quote h2 {
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.quote span {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-top: 20px;
+}
+
+/* PIE DE PÁGINA */
+
+.footer {
+    background: #050505;
+    text-align: center;
+    padding: 55px 20px;
+    border-top: 1px solid #222;
+}
+
+.footer h2 {
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.copyright {
+    margin-top: 25px;
+    letter-spacing: 2px;
+}
+
+/* ADAPTACIÓN A CELULARES Y TABLETS */
+
+@media (max-width: 900px) {
+
+    .header {
+        height: auto;
+        min-height: 85px;
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 0 8%;
+    }
+
+    .historia-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .members {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .albums {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar a {
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 75px 7%;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .members,
+    .albums {
+        grid-template-columns: 1fr;
+    }
+
+    .member-card img {
+        height: 400px;
+    }
+
+    .song {
+        gap: 15px;
+    }
+
+    .song h3 {
+        font-size: 14px;
+    }
+
+    .hero-number {
+        font-size: 10px;
+    }
+}
